@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Workstation: User's Manual</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            background-color: #34495e;
+            padding: 0.5rem;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+        }
+        nav ul li a:hover {
+            background-color: #2c3e50;
+        }
+        main {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Prompt Workstation: User's Manual</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#installation">Get Started / Installation</a></li>
+            <li><a href="#first-launch">First Launch</a></li>
+            <li><a href="#features">Major Features</a></li>
+            <li><a href="#settings">Settings</a></li>
+            <li><a href="#troubleshooting">Troubleshooting</a></li>
+            <li><a href="#data-storage">Data, Files, and Storage</a></li>
+            <li><a href="#privacy-security">Privacy and Security</a></li>
+            <li><a href="#updates">Updates</a></li>
+            <li><a href="#uninstallation">Uninstallation</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="installation">
+            <h2>Get Started / Installation</h2>
+            <p>This section guides you through the installation process.</p>
+            <h3>Overview</h3>
+<p>Prompt Workstation is a local prompt generation engine and catalog workstation. It allows you to create, manage, and triage prompts for various domains such as code, writing, planning, and architecture.</p>
+
+<h3>Installation</h3>
+
+<h4>Prerequisites</h4>
+<p>Before installing Prompt Workstation, ensure you have the following:</p>
+<ul>
+    <li><strong>Rust</strong>: Install the latest version of Rust from <a href="https://www.rust-lang.org/tools/install">rust-lang.org</a>.</li>
+    <li><strong>Node.js</strong>: Install Node.js (version 18 or later) from <a href="https://nodejs.org/">nodejs.org</a>.</li>
+</ul>
+
+<h4>Installation Methods</h4>
+
+<h5>Method 1: Using Tauri CLI</h5>
+<ol>
+    <li><strong>Clone the Repository</strong>:
+        <pre><code>git clone https://github.com/your-repo/prompt-workstation.git
+cd prompt-workstation</code></pre>
+    </li>
+    <li><strong>Install Dependencies</strong>:
+        <pre><code>npm install</code></pre>
+    </li>
+    <li><strong>Build the Application</strong>:
+        <pre><code>npm run build</code></pre>
+    </li>
+    <li><strong>Run the Application</strong>:
+        <pre><code>npm run tauri dev</code></pre>
+        <p>This will launch the application in development mode.</p>
+    </li>
+    <li><strong>Build for Production</strong>:
+        <pre><code>npm run build</code></pre>
+        <p>This will generate a production-ready binary in the <code>dist</code> folder.</p>
+    </li>
+    <li><strong>Launch the Application</strong>:
+        <ul>
+            <li>On <strong>Windows</strong>: Navigate to the <code>dist</code> folder and run <code>prompt-workstation.exe</code>.</li>
+            <li>On <strong>macOS</strong>: Navigate to the <code>dist</code> folder and run <code>prompt-workstation</code>.</li>
+            <li>On <strong>Linux</strong>: Navigate to the <code>dist</code> folder and run <code>./prompt-workstation</code>.</li>
+        </ul>
+    </li>
+</ol>
+
+<h5>Method 2: Manual Build</h5>
+<p>If you prefer to build the application manually:</p>
+<ol>
+    <li><strong>Clone the Repository</strong>:
+        <pre><code>git clone https://github.com/your-repo/prompt-workstation.git
+cd prompt-workstation</code></pre>
+    </li>
+    <li><strong>Install Dependencies</strong>:
+        <pre><code>npm install</code></pre>
+    </li>
+    <li><strong>Build the Application</strong>:
+        <pre><code>npm run build</code></pre>
+    </li>
+    <li><strong>Run the Application</strong>:
+        <ul>
+            <li>Use the Tauri CLI to run the application:
+                <pre><code>npm run tauri dev</code></pre>
+            </li>
+        </ul>
+    </li>
+</ol>
+
+<h4>Installation Path</h4>
+<p>The application will be installed in your local data directory, typically at:</p>
+<ul>
+    <li><strong>Windows</strong>: <code>%APPDATA%	auriesources	auri-store</code></li>
+    <li><strong>macOS</strong>: <code>~/Library/Application Support/tauri/resources/tauri-store</code></li>
+    <li><strong>Linux</strong>: <code>~/.config/tauri/resources/tauri-store</code></li>
+</ul>
+
+<h4>Launching the Application</h4>
+<p>After installation, launch the application from your desktop shortcut or via the command line.</p>
+
+<h4>First Launch</h4>
+<p>On first launch, the application will seed the catalog with starter prompts. This ensures you have a starting point for your prompts.</p>
+
+<h4>Verifying Installation</h4>
+<p>Open the application and check that the UI loads correctly. You should see the main dashboard with prompts and settings options.</p>
+
+<h4>Uninstallation</h4>
+<p>To uninstall the application, follow the platform-specific instructions below:</p>
+<ul>
+    <li><strong>Windows</strong>: Use the standard Windows uninstaller or delete the application files from <code>%APPDATA%	auriesources	auri-store</code> and the desktop shortcut.</li>
+    <li><strong>macOS</strong>: Use the standard macOS uninstaller or delete the application files from <code>~/Library/Application Support/tauri</code> and the dock icon.</li>
+    <li><strong>Linux</strong>: Use the standard Linux uninstaller or delete the application files from <code>~/.config/tauri</code> and the application menu.</li>
+</ul>
+        </section>
+        <section id="first-launch">
+            <h2>First Launch</h2>
+            <p>This section guides you through the first launch experience.</p>
+            <h3>Overview</h3>
+<p>After installing Prompt Workstation, this section guides you through the first launch experience.</p>
+
+<h3>What Happens on First Launch</h3>
+
+<h4>Initial Setup</h4>
+<ol>
+    <li><strong>Catalog Seeding</strong>:
+        <ul>
+            <li>The application automatically seeds the local SQLite database with starter prompts. This ensures you have a starting point for your prompts.</li>
+            <li>Starter prompts include:
+                <ul>
+                    <li><strong>Rust CLI Tool Builder</strong>: A template for generating a Rust CLI tool.</li>
+                    <li><strong>Technical Blog Post Outline</strong>: A template for creating a structured outline for a technical blog post.</li>
+                    <li><strong>System Architecture Review</strong>: A template for reviewing an architecture diagram and producing a risk assessment.</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><strong>Default Configuration</strong>:
+        <ul>
+            <li>The application loads default LLM settings for <code>freellm</code> with a local endpoint (<code>http://127.0.0.1:31415/v1</code>).</li>
+            <li>Ensure your local LLM service is running if you want to use these defaults.</li>
+        </ul>
+    </li>
+</ol>
+
+<h4>UI Overview</h4>
+<ul>
+    <li>The application opens to the main dashboard with a sidebar on the left and a main content area on the right.</li>
+    <li>The sidebar contains navigation options for:
+        <ul>
+            <li><strong>Catalog</strong>: Browse and manage prompts.</li>
+            <li><strong>Favorites</strong>: View your favorite prompts.</li>
+            <li><strong>Triage</strong>: Run the triage engine to categorize and refine prompts.</li>
+            <li><strong>Settings</strong>: Configure LLM endpoints and application settings.</li>
+        </ul>
+    </li>
+</ul>
+
+<h4>Starting Your Work</h4>
+<ol>
+    <li><strong>Open the Catalog View</strong>:
+        <ul>
+            <li>Click the <strong>Catalog</strong> option in the sidebar to view and manage your prompts.</li>
+            <li>You will see a list of starter prompts and any prompts you have added.</li>
+        </ul>
+    </li>
+    <li><strong>Edit a Prompt</strong>:
+        <ul>
+            <li>Click on a prompt to open its details.</li>
+            <li>Modify the prompt title, description, and content.</li>
+            <li>Click <strong>Save</strong> to update the prompt.</li>
+        </ul>
+    </li>
+    <li><strong>Mark as Favorite</strong>:
+        <ul>
+            <li>Click the favorite icon next to a prompt to mark it as a favorite.</li>
+        </ul>
+    </li>
+</ol>
+
+<h4>Verify Application Functionality</h4>
+<ul>
+    <li>Ensure that prompts are saved correctly and that the UI updates reflect your changes.</li>
+    <li>Test the LLM integration by navigating to the <strong>Settings</strong> view and clicking the <strong>Test Chat</strong> button to verify the active endpoint.</li>
+</ul>
+        </section>
+        <section id="features">
+            <h2>Major Features</h2>
+            <p>This section covers the core features of Prompt Workstation.</p>
+            <!-- Include content from features.md here -->
+        </section>
+        <section id="settings">
+            <h2>Settings</h2>
+            <p>This section explains how to configure LLM endpoints and application settings.</p>
+            <!-- Include content from settings.md here -->
+        </section>
+        <section id="troubleshooting">
+            <h2>Troubleshooting</h2>
+            <p>This section provides guidance on diagnosing and resolving common issues.</p>
+            <!-- Include content from troubleshooting.md here -->
+        </section>
+        <section id="data-storage">
+            <h2>Data, Files, and Storage</h2>
+            <p>This section explains where user data is stored and how to back it up.</p>
+            <!-- Include content from data-storage.md here -->
+        </section>
+        <section id="privacy-security">
+            <h2>Privacy and Security</h2>
+            <p>This section covers privacy and security considerations for Prompt Workstation.</p>
+            <!-- Include content from privacy-security.md here -->
+        </section>
+        <section id="updates">
+            <h2>Updates</h2>
+            <p>This section explains how to check for and apply updates to Prompt Workstation.</p>
+            <!-- Include content from updates.md here -->
+        </section>
+        <section id="uninstallation">
+            <h2>Uninstallation</h2>
+            <p>This section explains how to remove Prompt Workstation from your system.</p>
+            <!-- Include content from uninstallation.md here -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Prompt Workstation. All rights reserved.</p>
+    </footer>
+</body>
+</html>
